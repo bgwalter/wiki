@@ -10,18 +10,3 @@ wow, look that works!
 
 ### and a third
 
-`can I make code?`
-
-```python
-def main():
-    print("Yes, I can!")
-```
-
-```C
-#include <stdio.h>
-
-int void(main) {
-    printf("wow!");
-}
-```
-
