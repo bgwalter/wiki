@@ -25,9 +25,3 @@ int void(main) {
 }
 ```
 
-```Rust
-fn main() {
-    println!("man rust doesn't work..");
-    println!("oh but now it does hahaha");
-}
-```
