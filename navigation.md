@@ -1,5 +1,5 @@
-# vpascow
+# wiki
 
 [gimmick:theme](flatly)
 
-[Home](index.md)
+[brendonwalter.net](http://brendonwalter.net)
