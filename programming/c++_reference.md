@@ -34,7 +34,6 @@ std::string::compare()
 	>0 : self is shorter than comparison 
 	<0 : self is longer than comparison
 ```
-<!-- /> -->
 
 When used, it looks like the following:
 
