@@ -1,0 +1,315 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>C++ · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="bash_reference.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Programming references
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="bash_reference.html">
+            
+                <a href="bash_reference.html">
+            
+                    
+                    Bash
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.2" data-path="c++_reference.html">
+            
+                <a href="c++_reference.html">
+            
+                    
+                    C++
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >C++</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="operators">Operators</h2>
+<h3 id="-ternary-operator">? : (Ternary operator)</h3>
+<p>The ternary operator takes the form of <code>&lt;condition&gt; ? &lt;true&gt; : &lt;false&gt;</code></p>
+<pre><code class="lang-C++"><span class="hljs-keyword">int</span> a, b;
+
+<span class="hljs-comment">// code happens</span>
+
+<span class="hljs-keyword">return</span> (a == b) ? <span class="hljs-string">&quot;a and b are equal&quot;</span> : <span class="hljs-string">&quot;a and b are not equal&quot;</span>;
+</code></pre>
+<p>The above code is the same as</p>
+<pre><code class="lang-C++"><span class="hljs-keyword">if</span> (a == b) 
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;a and b are equal&quot;</span>;
+<span class="hljs-keyword">else</span> 
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;a and b are not equal&quot;</span>t;
+</code></pre>
+<h2 id="string-manipulation">String manipulation</h2>
+<h3 id="comparing-strings">Comparing strings</h3>
+<p>There are two ways to compare strings. The first is <code>std::string::compare()</code>, which returns:</p>
+<pre><code>std::string::compare()
+     0 : strings are equal
+    &gt;0 : self is shorter than comparison 
+    &lt;0 : self is longer than comparison
+</code></pre><p>When used, it looks like the following:</p>
+<pre><code class="lang-C++"><span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> a, b;
+
+<span class="hljs-comment">// code happens</span>
+
+<span class="hljs-keyword">if</span> (a.compare(b) == <span class="hljs-number">0</span>)
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Strings are equal&quot;</span>;
+</code></pre>
+<p>Many people on <a href="http://stackoverflow.com/questions/9158894/differences-between-c-string-and-compare" target="_blank">stackoverflow</a> say that this method is ugly and difficult to follow. Thus, they recomend the following:</p>
+<pre><code class="lang-C++"><span class="hljs-keyword">if</span> (a == b) {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Strings are equal&quot;</span>;
+}
+</code></pre>
+<p>There isn&apos;t much difference between these two methods, in fact, <code>operator==</code> calls <code>std::string::compare()</code> anyways.</p>
+<h3 id="concatenate-string">Concatenate string</h3>
+<pre><code class="lang-C++"><span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> name;
+
+<span class="hljs-comment">// code happens</span>
+
+<span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> greeting = <span class="hljs-string">&quot;Hello, &quot;</span> + name + <span class="hljs-string">&quot;!&quot;</span>;
+</code></pre>
+<h3 id="convert-to-string">Convert to string</h3>
+<pre><code class="lang-C++"><span class="hljs-keyword">int</span> n = <span class="hljs-number">42</span>;
+<span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> fourtytwo = <span class="hljs-built_in">std</span>::to_string(n);
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="bash_reference.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Bash">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"C++","level":"1.2.2","depth":2,"previous":{"title":"Bash","level":"1.2.1","depth":2,"path":"programming/bash_reference.md","ref":"programming/bash_reference.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"programming/c++_reference.md","mtime":"2016-10-23T00:24:09.334Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-10-24T05:20:56.259Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
